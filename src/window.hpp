@@ -2,6 +2,7 @@
 #include "SFML/System.hpp"
 #include "SFML/Window.hpp"
 #include "SFML/Graphics.hpp"
+#include "eventmanager.hpp"
 #include <string>
 
 class Window {
@@ -19,7 +20,10 @@ public:
 	bool IsFullscreen();
 	sf::Vector2u GetWindowSize();
 
-	void ToggleFullscreen();
+	bool IsFocused();
+	EventManager* GetEventManager();
+	void ToggleFullscreen(EventDetails* l_details);
+	void Close(EventDetails* l_details = nullptr);
 
 	void Draw(sf::Drawable& l_drawable);
 
@@ -33,6 +37,8 @@ private:
 	sf::RenderWindow m_window;
 	sf::Vector2u m_windowSize;
 	std::string m_windowTitle;
+	EventManager* m_eventManager;
 	bool m_isDone;
+	bool m_isFocused;
 	bool m_isFullscreen;
 };

@@ -1,4 +1,5 @@
 #include "window.hpp"
+#include "eventmanager.hpp"
 
 Window::Window() { Setup("Window", sf::Vector2u(640, 480)); }
 
@@ -16,6 +17,10 @@ void Window::Setup(const std::string& l_title, const sf::Vector2u& l_size)
 	m_isFullscreen = false;
 	m_isDone = false;
 	Create();
+
+	m_isFocused = true;
+	m_eventManager.AddCallback("Fullscreen_toggle", &Window::ToggleFullscreen, this);
+	m_eventManager.AddCallback("Window_close", &Window::Close, this);
 }
 
 void Window::Create()
@@ -34,18 +39,22 @@ void Window::Update()
 	sf::Event event;
 	while (m_window.pollEvent(event))
 	{
-		if (event.type == sf::Event::Closed)
+		if (event.type == sf::Event::LostFocus)
 		{
-			m_isDone = true;
+			m_isFocused = false;
+			m_eventManager.SetFocus(false);
 		}
-		else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::F5)
+		else if (event.type = sf::Event::GainedFocus)
 		{
-			ToggleFullscreen();
+			m_isFocused = true;
+			m_eventManager.SetFocus(true);
 		}
+		m_eventManager.HandleEvent(event);
 	}
+	m_eventManager.Update();
 }
 
-void Window::ToggleFullscreen()
+void Window::ToggleFullscreen(EventDetails* l_details)
 {
 	m_isFullscreen = !m_isFullscreen;
 	Destroy();
@@ -53,15 +62,13 @@ void Window::ToggleFullscreen()
 }
 
 /* Helper method implementations */
-void Window::BeginDraw() { m_window.clear(sf::Color::Black); }
-void Window::EndDraw() { m_window.display(); }
-bool Window::IsDone() { return m_isDone; }
-bool Window::IsFullscreen() { return m_isFullscreen; }
-sf::Vector2u Window::GetWindowSize() { return m_windowSize; }
-sf::RenderWindow& Window::GetRenderWindow()
-{
-	return m_window;
-}
+void Window::BeginDraw()                    { m_window.clear(sf::Color::Black); }
+void Window::EndDraw()                      { m_window.display(); }
+bool Window::IsDone()                       { return m_isDone; }
+bool Window::IsFullscreen()                 { return m_isFullscreen; }
+sf::Vector2u Window::GetWindowSize()        { return m_windowSize; }
+sf::RenderWindow& Window::GetRenderWindow() { return m_window; }
+void Window::Close(EventDetails* l_details) { m_isDone = true; }
 
 void Window::Draw(sf::Drawable& l_drawable)
 {

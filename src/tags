@@ -1,0 +1,146 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Add	.\textbox.cpp	/^void Textbox::Add(std::string l_message)$/;"	f	class:Textbox
+AddCallback	.\eventmanager.hpp	/^	bool AddCallback(const std::string& l_name, void(T::*l_func)(EventDetails*), T* l_instance)$/;"	f	class:EventManager
+BeginDraw	.\window.cpp	/^void Window::BeginDraw() { m_window.clear(sf::Color::Black); }$/;"	f	class:Window
+BindEvent	.\eventmanager.hpp	/^	void BindEvent(EventType l_type, EventInfo l_info = EventInfo())$/;"	f	struct:Binding
+Binding	.\eventmanager.hpp	/^	Binding(const std::string& l_name) : m_name(l_name), m_details(l_name), c(0) {}$/;"	f	struct:Binding
+Binding	.\eventmanager.hpp	/^struct Binding$/;"	s
+CheckCollision	.\snake.cpp	/^void Snake::CheckCollision()$/;"	f	class:Snake
+Clear	.\eventmanager.hpp	/^	void Clear()$/;"	f	struct:EventDetails
+Clear	.\textbox.cpp	/^void Textbox::Clear() { m_messages.clear(); }$/;"	f	class:Textbox
+Closed	.\eventmanager.hpp	/^	Closed        = sf::Event::Closed,$/;"	m	class:EventType
+Create	.\window.cpp	/^void Window::Create()$/;"	f	class:Window
+Cut	.\snake.cpp	/^void Snake::Cut(int l_segments)$/;"	f	class:Snake
+Destroy	.\window.cpp	/^void Window::Destroy()$/;"	f	class:Window
+Direction	.\snake.hpp	/^enum class Direction { None, Up, Down, Left, Right };$/;"	c
+Down	.\snake.hpp	/^enum class Direction { None, Up, Down, Left, Right };$/;"	m	class:Direction
+Draw	.\window.cpp	/^void Window::Draw(sf::Drawable& l_drawable)$/;"	f	class:Window
+EndDraw	.\window.cpp	/^void Window::EndDraw() { m_window.display(); }$/;"	f	class:Window
+EventDetails	.\eventmanager.hpp	/^	EventDetails(const std::string& l_bindName) : m_name(l_bindName)$/;"	f	struct:EventDetails
+EventDetails	.\eventmanager.hpp	/^struct EventDetails$/;"	s
+EventInfo	.\eventmanager.hpp	/^	EventInfo() { m_code = 0; }$/;"	f	struct:EventInfo
+EventInfo	.\eventmanager.hpp	/^	EventInfo(int l_event) { m_code = l_event; }$/;"	f	struct:EventInfo
+EventInfo	.\eventmanager.hpp	/^struct EventInfo$/;"	s
+EventManager	.\eventmanager.hpp	/^class EventManager$/;"	c
+EventType	.\eventmanager.hpp	/^enum class EventType$/;"	c
+Extend	.\snake.cpp	/^void Snake::Extend()$/;"	f	class:Snake
+GainedFocus	.\eventmanager.hpp	/^	GainedFocus   = sf::Event::GainedFocus,$/;"	m	class:EventType
+Game	.\game.cpp	/^Game::Game(): m_window("Snake", sf::Vector2u(800, 600)),$/;"	f	class:Game
+Game	.\game.hpp	/^class Game$/;"	c
+GetBlockSize	.\world.cpp	/^int World::GetBlockSize() { return m_blockSize; }$/;"	f	class:World
+GetElapsed	.\game.cpp	/^sf::Time Game::GetElapsed() { return m_elapsed; }$/;"	f	class:Game
+GetLives	.\snake.cpp	/^int Snake::GetLives() { return m_lives; }$/;"	f	class:Snake
+GetMousePos	.\eventmanager.hpp	/^	sf::Vector2i GetMousePos(sf::RenderWindow* l_wind = nullptr)$/;"	f	class:EventManager
+GetPhysicalDirection	.\snake.cpp	/^Direction Snake::GetPhysicalDirection()$/;"	f	class:Snake
+GetPosition	.\snake.cpp	/^sf::Vector2i Snake::GetPosition()$/;"	f	class:Snake
+GetRenderWindow	.\window.cpp	/^sf::RenderWindow& Window::GetRenderWindow()$/;"	f	class:Window
+GetScore	.\snake.cpp	/^int Snake::GetScore() { return m_score; }$/;"	f	class:Snake
+GetSpeed	.\snake.cpp	/^int Snake::GetSpeed() { return m_speed; }$/;"	f	class:Snake
+GetWindow	.\game.cpp	/^Window* Game::GetWindow()$/;"	f	class:Game
+GetWindowSize	.\window.cpp	/^sf::Vector2u Window::GetWindowSize() { return m_windowSize; }$/;"	f	class:Window
+HandleInput	.\game.cpp	/^void Game::HandleInput()$/;"	f	class:Game
+HasLost	.\snake.cpp	/^bool Snake::HasLost()       { return m_lost; }$/;"	f	class:Snake
+IncreaseScore	.\snake.cpp	/^void Snake::IncreaseScore() { m_score += 10; }$/;"	f	class:Snake
+IsDone	.\window.cpp	/^bool Window::IsDone() { return m_isDone; }$/;"	f	class:Window
+IsFullscreen	.\window.cpp	/^bool Window::IsFullscreen() { return m_isFullscreen; }$/;"	f	class:Window
+KeyDown	.\eventmanager.hpp	/^	KeyDown       = sf::Event::KeyPressed,$/;"	m	class:EventType
+KeyUp	.\eventmanager.hpp	/^	KeyUp         = sf::Event::KeyReleased,$/;"	m	class:EventType
+Keyboard	.\eventmanager.hpp	/^	Keyboard      = sf::Event::Count + 1, Mouse, Joystick$/;"	m	class:EventType
+Left	.\snake.hpp	/^enum class Direction { None, Up, Down, Left, Right };$/;"	m	class:Direction
+Lose	.\snake.cpp	/^void Snake::Lose()          { m_lost = true; }$/;"	f	class:Snake
+LostFocus	.\eventmanager.hpp	/^	LostFocus     = sf::Event::LostFocus,$/;"	m	class:EventType
+MButtonDown	.\eventmanager.hpp	/^	MButtonDown   = sf::Event::MouseButtonPressed,$/;"	m	class:EventType
+MButtonUp	.\eventmanager.hpp	/^	MButtonUp     = sf::Event::MouseButtonReleased,$/;"	m	class:EventType
+MosueEntered	.\eventmanager.hpp	/^	MosueEntered  = sf::Event::MouseEntered,$/;"	m	class:EventType
+Mouse	.\eventmanager.hpp	/^	Keyboard      = sf::Event::Count + 1, Mouse, Joystick$/;"	m	class:EventType
+MouseLeft	.\eventmanager.hpp	/^	MouseLeft     = sf::Event::MouseLeft,$/;"	m	class:EventType
+MouseWheel	.\eventmanager.hpp	/^	MouseWheel    = sf::Event::MouseWheelMoved,$/;"	m	class:EventType
+Move	.\snake.cpp	/^void Snake::Move()$/;"	f	class:Snake
+None	.\snake.hpp	/^enum class Direction { None, Up, Down, Left, Right };$/;"	m	class:Direction
+RemoveCallback	.\eventmanager.hpp	/^	void RemoveCallback(const std::string& l_name)$/;"	f	class:EventManager
+Render	.\game.cpp	/^void Game::Render()$/;"	f	class:Game
+Render	.\snake.cpp	/^void Snake::Render(sf::RenderWindow& l_window)$/;"	f	class:Snake
+Render	.\textbox.cpp	/^void Textbox::Render(sf::RenderWindow& l_wind)$/;"	f	class:Textbox
+Render	.\world.cpp	/^void World::Render(sf::RenderWindow& l_window)$/;"	f	class:World
+Reset	.\snake.cpp	/^void Snake::Reset()$/;"	f	class:Snake
+RespawnApple	.\world.cpp	/^void World::RespawnApple()$/;"	f	class:World
+RestartClock	.\game.cpp	/^void Game::RestartClock() { m_elapsed = m_clock.restart(); }$/;"	f	class:Game
+SetDirection	.\snake.cpp	/^void Snake::SetDirection(Direction l_dir) { m_dir = l_dir; }$/;"	f	class:Snake
+Setup	.\textbox.cpp	/^void Textbox::Setup(int l_visible, int l_charSize, int l_width, sf::Vector2f l_screenPos)$/;"	f	class:Textbox
+Setup	.\window.cpp	/^void Window::Setup(const std::string& l_title, const sf::Vector2u& l_size)$/;"	f	class:Window
+Snake	.\snake.cpp	/^Snake::Snake(int l_blockSize)$/;"	f	class:Snake
+Snake	.\snake.hpp	/^class Snake$/;"	c
+SnakeSegment	.\snake.hpp	/^ SnakeSegment(int x, int y) : position(x,y){}$/;"	f	struct:SnakeSegment
+SnakeSegment	.\snake.hpp	/^struct SnakeSegment{$/;"	s
+TextEntered	.\eventmanager.hpp	/^	TextEntered   = sf::Event::TextEntered,$/;"	m	class:EventType
+Textbox	.\textbox.cpp	/^Textbox::Textbox()$/;"	f	class:Textbox
+Textbox	.\textbox.cpp	/^Textbox::Textbox(int l_visible, int l_charSize, int l_width, sf::Vector2f l_screenPos)$/;"	f	class:Textbox
+Textbox	.\textbox.hpp	/^class Textbox$/;"	c
+Tick	.\snake.cpp	/^void Snake::Tick()$/;"	f	class:Snake
+ToggleFullscreen	.\window.cpp	/^void Window::ToggleFullscreen()$/;"	f	class:Window
+ToggleLost	.\snake.cpp	/^void Snake::ToggleLost()    { m_lost = !m_lost; }$/;"	f	class:Snake
+Up	.\snake.hpp	/^enum class Direction { None, Up, Down, Left, Right };$/;"	m	class:Direction
+Update	.\game.cpp	/^void Game::Update()$/;"	f	class:Game
+Update	.\window.cpp	/^void Window::Update()$/;"	f	class:Window
+Update	.\world.cpp	/^void World::Update(Snake& l_player)$/;"	f	class:World
+Window	.\window.cpp	/^Window::Window() { Setup("Window", sf::Vector2u(640, 480)); }$/;"	f	class:Window
+Window	.\window.cpp	/^Window::Window(const std::string& l_title, const sf::Vector2u& l_size)$/;"	f	class:Window
+Window	.\window.hpp	/^class Window {$/;"	c
+WindowResized	.\eventmanager.hpp	/^	WindowResized = sf::Event::Resized,$/;"	m	class:EventType
+World	.\world.cpp	/^World::World(sf::Vector2u l_windSize)$/;"	f	class:World
+World	.\world.hpp	/^class World$/;"	c
+c	.\eventmanager.hpp	/^	int c; \/\/ Count of events that are happening$/;"	m	struct:Binding
+m_appleShape	.\world.hpp	/^	sf::CircleShape m_appleShape;$/;"	m	class:World
+m_backdrop	.\textbox.hpp	/^	sf::RectangleShape m_backdrop;$/;"	m	class:Textbox
+m_bindings	.\eventmanager.hpp	/^	Bindings m_bindings;$/;"	m	class:EventManager
+m_blockSize	.\world.hpp	/^	int m_blockSize;$/;"	m	class:World
+m_bodyRect	.\snake.hpp	/^	sf::RectangleShape m_bodyRect; \/\/ Shape used in rendering$/;"	m	class:Snake
+m_bounds	.\world.hpp	/^	sf::RectangleShape m_bounds[4];$/;"	m	class:World
+m_callbacks	.\eventmanager.hpp	/^	Callbacks m_callbacks;$/;"	m	class:EventManager
+m_clock	.\game.hpp	/^	sf::Clock m_clock;$/;"	m	class:Game
+m_code	.\eventmanager.hpp	/^		int m_code;$/;"	m	union:EventInfo::__anon1
+m_content	.\textbox.hpp	/^	sf::Text m_content;$/;"	m	class:Textbox
+m_details	.\eventmanager.hpp	/^	EventDetails m_details;$/;"	m	struct:Binding
+m_dir	.\snake.hpp	/^	Direction m_dir;               \/\/ current direction$/;"	m	class:Snake
+m_elapsed	.\game.hpp	/^	sf::Time m_elapsed;$/;"	m	class:Game
+m_events	.\eventmanager.hpp	/^	Events m_events;$/;"	m	struct:Binding
+m_font	.\textbox.hpp	/^	sf::Font m_font;$/;"	m	class:Textbox
+m_hasFocus	.\eventmanager.hpp	/^	bool m_hasFocus;$/;"	m	class:EventManager
+m_increment	.\game.hpp	/^	sf::Vector2i m_increment;$/;"	m	class:Game
+m_isDone	.\window.hpp	/^	bool m_isDone;$/;"	m	class:Window
+m_isFullscreen	.\window.hpp	/^	bool m_isFullscreen;$/;"	m	class:Window
+m_item	.\world.hpp	/^	sf::Vector2i m_item;$/;"	m	class:World
+m_keyCode	.\eventmanager.hpp	/^	int m_keyCode;$/;"	m	struct:EventDetails
+m_lives	.\snake.hpp	/^	int m_lives;$/;"	m	class:Snake
+m_lost	.\snake.hpp	/^	bool m_lost;                   \/\/ losing state$/;"	m	class:Snake
+m_messages	.\textbox.hpp	/^	MessageContainer m_messages;$/;"	m	class:Textbox
+m_mouseWheelDelta	.\eventmanager.hpp	/^	int m_mouseWheelDelta;$/;"	m	struct:EventDetails
+m_name	.\eventmanager.hpp	/^	std::string m_name;$/;"	m	struct:Binding
+m_name	.\eventmanager.hpp	/^	std::string m_name;$/;"	m	struct:EventDetails
+m_numVisible	.\textbox.hpp	/^	int m_numVisible;$/;"	m	class:Textbox
+m_score	.\snake.hpp	/^	int m_score;$/;"	m	class:Snake
+m_size	.\eventmanager.hpp	/^	std::Vector2i m_size;$/;"	m	struct:EventDetails
+m_size	.\snake.hpp	/^	int m_size;                    \/\/ size of the graphics$/;"	m	class:Snake
+m_snake	.\game.hpp	/^	Snake m_snake;$/;"	m	class:Game
+m_snakeBody	.\snake.hpp	/^	SnakeContainer m_snakeBody;    \/\/ Segment vector$/;"	m	class:Snake
+m_speed	.\snake.hpp	/^	int m_speed;$/;"	m	class:Snake
+m_textEntered	.\eventmanager.hpp	/^	sf::Uint32 m_textEntered;$/;"	m	struct:EventDetails
+m_textbox	.\game.hpp	/^	Textbox m_textbox;$/;"	m	class:Game
+m_window	.\game.hpp	/^	Window m_window;$/;"	m	class:Game
+m_window	.\window.hpp	/^	sf::RenderWindow m_window;$/;"	m	class:Window
+m_windowSize	.\window.hpp	/^	sf::Vector2u m_windowSize;$/;"	m	class:Window
+m_windowSize	.\world.hpp	/^	sf::Vector2u m_windowSize;$/;"	m	class:World
+m_windowTitle	.\window.hpp	/^	std::string m_windowTitle;$/;"	m	class:Window
+m_world	.\game.hpp	/^	World m_world;$/;"	m	class:Game
+main	.\main.cpp	/^int main(int argc, char** argv)$/;"	f
+position	.\snake.hpp	/^ sf::Vector2i position;$/;"	m	struct:SnakeSegment
+~Game	.\game.cpp	/^Game::~Game() {}$/;"	f	class:Game
+~Snake	.\snake.cpp	/^Snake::~Snake() {}$/;"	f	class:Snake
+~Textbox	.\textbox.cpp	/^Textbox::~Textbox() { Clear(); }$/;"	f	class:Textbox
+~Window	.\window.cpp	/^Window::~Window() { Destroy(); }$/;"	f	class:Window
+~World	.\world.cpp	/^World::~World() {}$/;"	f	class:World

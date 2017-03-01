@@ -3,6 +3,7 @@
 #include "snake.hpp"
 #include "textbox.hpp"
 #include "window.hpp"
+#include "eventmanager.hpp"
 
 class Game
 {
@@ -19,6 +20,7 @@ public:
 
 	sf::Time GetElapsed();
 	void RestartClock();
+	void MoveSprite(EventDetails* l_details);
 
 private:
 	Window m_window;

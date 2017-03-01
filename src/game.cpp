@@ -5,6 +5,7 @@ Game::Game(): m_window("Snake", sf::Vector2u(800, 600)),
 	m_snake(m_world.GetBlockSize()), m_world(sf::Vector2u(800, 600))
 {
 	m_textbox.Setup(5, 14, 350, sf::Vector2f(255,0));
+	m_textbox.Add("\t\t\t\t\t\t\t\tSFML-Snake");
 	m_textbox.Add("Seeded random number generator with: " + std::to_string(time(NULL)));
 	m_increment = sf::Vector2i(400,400);
 }

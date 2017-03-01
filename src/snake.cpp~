@@ -112,8 +112,6 @@ void Snake::Extend()
 	if (m_snakeBody.empty())
 		return;
 
-	t_textbox.Add("You ate an apple. Score: %d", m_score);
-
 	SnakeSegment& tail_head = m_snakeBody[m_snakeBody.size() - 1]; // Create a reference to the last element in the segment vector
 
 	if (m_snakeBody.size() > 1)

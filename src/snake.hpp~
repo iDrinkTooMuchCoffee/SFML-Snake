@@ -50,5 +50,4 @@ private:
 	int m_score;
 	bool m_lost;                   // losing state
 	sf::RectangleShape m_bodyRect; // Shape used in rendering
-
 };

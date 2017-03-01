@@ -107,13 +107,11 @@ void EventManager::Update()
 				case (EventType::Keyboard):
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(e_itr.second.m_code)))
 					{
-<<<<<<< HEAD
+						std::cout << e_itr.second.m_code << " is pressed\n";
 						if (bind->m_details.m_keyCode != -1)
 						{
 							bind->m_details.m_keyCode = e_itr.second.m_code;
 						}
-=======
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
 						++(bind->c);
 					}
 					break;

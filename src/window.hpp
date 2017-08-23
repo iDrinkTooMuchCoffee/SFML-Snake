@@ -37,11 +37,8 @@ private:
 	sf::RenderWindow m_window;
 	sf::Vector2u m_windowSize;
 	std::string m_windowTitle;
-<<<<<<< HEAD
-	EventManager m_eventManager;
-=======
+	//EventManager m_eventManager; // ??
 	EventManager* m_eventManager;
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
 	bool m_isDone;
 	bool m_isFocused;
 	bool m_isFullscreen;

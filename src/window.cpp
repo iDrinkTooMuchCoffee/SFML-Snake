@@ -1,9 +1,6 @@
 #include "window.hpp"
 #include "eventmanager.hpp"
-<<<<<<< HEAD
 #include <iostream>
-=======
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
 
 Window::Window() { Setup("Window", sf::Vector2u(640, 480)); }
 
@@ -18,22 +15,13 @@ void Window::Setup(const std::string& l_title, const sf::Vector2u& l_size)
 {
 	m_windowTitle = l_title;
 	m_windowSize = l_size;
-<<<<<<< HEAD
-	m_eventManager.AddCallback("Fullscreen_toggle", &Window::ToggleFullscreen, this);
-	m_eventManager.AddCallback("Window_close", &Window::Close, this);
-	m_isFullscreen = false;
-	m_isDone = false;
-	m_isFocused = true;
-	Create();
-=======
-	m_isFullscreen = false;
-	m_isDone = false;
-	Create();
 
-	m_isFocused = true;
 	m_eventManager.AddCallback("Fullscreen_toggle", &Window::ToggleFullscreen, this);
 	m_eventManager.AddCallback("Window_close", &Window::Close, this);
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
+	m_isFullscreen = false;
+	m_isDone = false;
+	m_isFocused = true;
+	Create();
 }
 
 void Window::Create()
@@ -57,11 +45,7 @@ void Window::Update()
 			m_isFocused = false;
 			m_eventManager.SetFocus(false);
 		}
-<<<<<<< HEAD
-		else if (event.type == sf::Event::GainedFocus)
-=======
 		else if (event.type = sf::Event::GainedFocus)
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
 		{
 			m_isFocused = true;
 			m_eventManager.SetFocus(true);
@@ -86,10 +70,7 @@ bool Window::IsFullscreen()                 { return m_isFullscreen; }
 sf::Vector2u Window::GetWindowSize()        { return m_windowSize; }
 sf::RenderWindow& Window::GetRenderWindow() { return m_window; }
 void Window::Close(EventDetails* l_details) { m_isDone = true; }
-<<<<<<< HEAD
 EventManager* Window::GetEventManager()		{ return &m_eventManager; }
-=======
->>>>>>> 38a3345e3df3eae21f8dedd73b22ea99ed0dc7a6
 
 void Window::Draw(sf::Drawable& l_drawable)
 {
